@@ -3,11 +3,22 @@
 	"ignorePaths": [
 		".all-contributorsrc",
 		".github",
+		".tmp-tests",
 		"CHANGELOG.md",
 		"coverage",
+		"dist",
 		"lib",
 		"node_modules",
 		"pnpm-lock.yaml"
 	],
-	"words": ["eeef", "formatly"]
+	"words": [
+		"biomejs",
+		"dprint",
+		"eeef",
+		"extraheader",
+		"formatly",
+		"lockfiles",
+		"oxfmt",
+		"postbuild"
+	]
 }

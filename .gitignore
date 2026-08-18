@@ -1,3 +1,4 @@
+/.tmp-tests
 /coverage
 /lib
 /node_modules

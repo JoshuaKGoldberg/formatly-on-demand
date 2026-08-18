@@ -14,7 +14,15 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig(
 	globalIgnores(
-		["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
+		[
+			"**/*.snap",
+			".tmp-tests",
+			"coverage",
+			"dist",
+			"lib",
+			"node_modules",
+			"pnpm-lock.yaml",
+		],
 		"Global Ignores",
 	),
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
@@ -34,7 +42,9 @@ export default defineConfig(
 		files: ["**/*.{js,ts}"],
 		languageOptions: {
 			parserOptions: {
-				projectService: { allowDefaultProject: ["*.config.*s"] },
+				projectService: {
+					allowDefaultProject: ["*.config.*s", "postbuild.js"],
+				},
 			},
 		},
 		rules: {

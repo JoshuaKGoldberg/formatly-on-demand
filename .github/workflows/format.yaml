@@ -1,0 +1,142 @@
+concurrency:
+  cancel-in-progress: false
+  group: formatly-on-demand-${{ github.event.issue.number }}
+
+jobs:
+  apply:
+    if: needs.resolve.outputs.should-format == 'true'
+    needs:
+      - detect
+      - resolve
+    permissions:
+      issues: write
+      pull-requests: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ needs.resolve.outputs.head-sha }}
+          repository: ${{ needs.resolve.outputs.head-repository }}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: formatly-on-demand-patch
+          path: ${{ runner.temp }}/formatly-on-demand
+      - uses: JoshuaKGoldberg/formatly-on-demand@v0
+        with:
+          command: ${{ inputs.command }}
+          comment-footer: ${{ inputs.comment-footer }}
+          comment-header: ${{ inputs.comment-header }}
+          commit-message: ${{ inputs.commit-message }}
+          head-ref: ${{ needs.resolve.outputs.head-ref }}
+          head-repository: ${{ needs.resolve.outputs.head-repository }}
+          head-sha: ${{ needs.resolve.outputs.head-sha }}
+          mode: apply
+          output-directory: ${{ runner.temp }}/formatly-on-demand
+          pull-request-number: ${{ github.event.issue.number }}
+          push-token: ${{ secrets.push-token }}
+          working-directory: ${{ inputs.working-directory }}
+  detect:
+    if: needs.resolve.outputs.should-format == 'true'
+    needs: resolve
+    permissions: {}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ needs.resolve.outputs.head-sha }}
+          repository: ${{ needs.resolve.outputs.head-repository }}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ inputs.node-version }}
+      - if: inputs.install != ''
+        run: ${{ inputs.install }}
+        working-directory: ${{ inputs.working-directory }}
+      - id: detect
+        uses: JoshuaKGoldberg/formatly-on-demand@v0
+        with:
+          files: ${{ needs.resolve.outputs.files }}
+          head-sha: ${{ needs.resolve.outputs.head-sha }}
+          mode: detect
+          pull-request-number: ${{ github.event.issue.number }}
+          working-directory: ${{ inputs.working-directory }}
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: formatly-on-demand-patch
+          path: ${{ steps.detect.outputs.output-directory }}
+  resolve:
+    if: ${{ github.event.issue.pull_request && !endsWith(github.actor, '[bot]') }}
+    outputs:
+      files: ${{ steps.resolve.outputs.files }}
+      head-ref: ${{ steps.resolve.outputs.head-ref }}
+      head-repository: ${{ steps.resolve.outputs.head-repository }}
+      head-sha: ${{ steps.resolve.outputs.head-sha }}
+      should-format: ${{ steps.resolve.outputs.should-format }}
+    permissions:
+      issues: write
+      pull-requests: read
+    runs-on: ubuntu-latest
+    steps:
+      - id: resolve
+        uses: JoshuaKGoldberg/formatly-on-demand@v0
+        with:
+          accept-yes: ${{ inputs.accept-yes }}
+          allowed-associations: ${{ inputs.allowed-associations }}
+          command: ${{ inputs.command }}
+          comment-footer: ${{ inputs.comment-footer }}
+          comment-header: ${{ inputs.comment-header }}
+          mode: resolve
+          push-token-available: ${{ secrets.push-token != '' }}
+
+name: Formatly on Demand Format
+
+on:
+  workflow_call:
+    inputs:
+      accept-yes:
+        default: true
+        description: Whether a comment of just 'yes' counts as asking for formatting.
+        required: false
+        type: boolean
+      allowed-associations:
+        default: OWNER,MEMBER,COLLABORATOR
+        description: Comma-separated GitHub author associations allowed to ask for formatting, in addition to the pull request's author.
+        required: false
+        type: string
+      command:
+        default: /formatly
+        description: Comment text that asks for formatting.
+        required: false
+        type: string
+      comment-footer:
+        description: Custom footer text for comments.
+        required: false
+        type: string
+      comment-header:
+        description: Custom header text for comments.
+        required: false
+        type: string
+      commit-message:
+        default: "chore: apply formatly formatting"
+        description: Message for the formatting commit.
+        required: false
+        type: string
+      install:
+        description: Command that installs dependencies, such as 'npm ci'.
+        required: false
+        type: string
+      node-version:
+        default: lts/*
+        description: Node.js version to run the formatter with.
+        required: false
+        type: string
+      working-directory:
+        default: .
+        description: Directory holding the project to format.
+        required: false
+        type: string
+    secrets:
+      push-token:
+        description: Token with push access to fork branches, needed to format pull requests from forks.
+        required: false

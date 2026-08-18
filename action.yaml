@@ -1,0 +1,112 @@
+author: JoshuaKGoldberg
+branding:
+  color: green
+  icon: droplet
+description: Offers to format pull requests with whatever formatter your project is already using, then formats them on demand. 🧼
+inputs:
+  accept-yes:
+    default: "true"
+    description: Whether a comment of just 'yes' counts as asking for formatting.
+    required: false
+  allowed-associations:
+    default: OWNER,MEMBER,COLLABORATOR
+    description: Comma-separated GitHub author associations allowed to ask for formatting, in addition to the pull request's author.
+    required: false
+  base-sha:
+    description: "Commit to diff against when resolving changed files. Default: the pull request's base."
+    required: false
+  command:
+    default: /formatly
+    description: Comment text that asks for formatting.
+    required: false
+  comment-footer:
+    description: Custom footer text for comments.
+    required: false
+  comment-header:
+    description: Custom header text for comments.
+    required: false
+  commit-message:
+    default: "chore: apply formatly formatting"
+    description: Message for the formatting commit.
+    required: false
+  files:
+    description: JSON array of files to check, instead of diffing against base-sha.
+    required: false
+  github-token:
+    default: ${{ github.token }}
+    description: Token used to read pull requests and post comments.
+    required: false
+  head-ref:
+    description: Branch to push formatting to, in 'apply' mode.
+    required: false
+  head-repository:
+    description: "'owner/repo' holding the branch to push to, in 'apply' mode."
+    required: false
+  head-sha:
+    description: Commit the formatting was computed from.
+    required: false
+  max-files:
+    default: "200"
+    description: Most files a single formatting commit may change.
+    required: false
+  max-patch-bytes:
+    default: "1000000"
+    description: Largest formatting patch, in bytes, that may be applied.
+    required: false
+  meta-path:
+    description: "Path to detection results. Default: meta.json in output-directory."
+    required: false
+  mode:
+    description: Which step to run, as 'detect', 'offer', 'resolve', or 'apply'.
+    required: true
+  output-directory:
+    description: "Directory to write detection results to. Default: a directory under RUNNER_TEMP."
+    required: false
+  patch-path:
+    description: "Path to the formatting patch. Default: formatly.patch in output-directory."
+    required: false
+  pull-request-number:
+    description: Pull request to act on, if the event doesn't provide one.
+    required: false
+  push-token:
+    description: Token with push access to fork branches, for 'apply' mode on pull requests from forks.
+    required: false
+  push-token-available:
+    default: "false"
+    description: Whether a push token is configured, for 'resolve' mode to check before offering to format a fork's pull request.
+    required: false
+  working-directory:
+    default: .
+    description: Directory holding the checked out repository.
+    required: false
+name: Formatly on Demand
+outputs:
+  files:
+    description: JSON array of files that need formatting.
+  formatter:
+    description: Name of the detected formatter, if any.
+  head-ref:
+    description: Branch of the pull request to format.
+  head-repository:
+    description: "'owner/repo' holding the branch to format."
+  head-sha:
+    description: Commit the formatting was computed from.
+  meta-path:
+    description: Path the detection results were written to.
+  needs-formatting:
+    description: Whether any files need formatting.
+  output-directory:
+    description: Directory the detection results were written to.
+  patch-path:
+    description: Path the formatting patch was written to.
+  pull-request-number:
+    description: Pull request that was acted on.
+  pushed-sha:
+    description: Commit that was pushed, if any.
+  should-format:
+    description: Whether a comment asked for formatting and is allowed to.
+  skip-reason:
+    description: Why formatting was skipped, if it was.
+runs:
+  main: dist/index.js
+  using: node24

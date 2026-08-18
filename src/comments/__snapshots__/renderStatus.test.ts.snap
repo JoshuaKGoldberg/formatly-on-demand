@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderStatus > renders a comment when given the 'already-formatted' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 Nothing to format
+
+This pull request's files already match the repository's formatting. Thanks!
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'applied' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 Formatted!
+
+I formatted one file and pushed \`0123456\` to this branch.
+
+If you have this branch checked out locally, pull before you commit again:
+
+\`\`\`shell
+git pull
+\`\`\`
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'branch-moved' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 This branch moved
+
+New commits landed while I was formatting, so I stopped rather than push over them. Comment \`/formatly\` again and I'll start over from the latest commit.
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'maintainer-edits-blocked' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 I can't push to this branch
+
+This pull request comes from a fork with _Allow edits by maintainers_ turned off. Turning that on in the sidebar will let me push formatting here.
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'missing-push-token' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 I can't push to this branch
+
+Formatting pull requests from forks needs a token this repository hasn't configured. A maintainer will need to format this one by hand.
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'patch-rejected' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 I stopped before pushing
+
+The formatting changes didn't pass this action's safety checks, so nothing was pushed: the patch is empty.
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'push-failed' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 I couldn't push to this branch
+
+The push was rejected, so nothing changed here. A maintainer can check this workflow's logs for details.
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders a comment when given the 'resolved' status 1`] = `
+"<!-- formatly-on-demand -->
+
+### 🧼 Formatting looks good now
+
+Nothing left for me to do here. Thanks!
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
+
+exports[`renderStatus > renders custom header and footer text when they are provided 1`] = `
+"<!-- formatly-on-demand -->
+
+Hi from the Example team!
+
+### 🧼 Formatting looks good now
+
+Nothing left for me to do here. Thanks!
+
+_Questions? Ask in Discord._
+
+> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+`;
