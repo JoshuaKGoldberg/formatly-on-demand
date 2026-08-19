@@ -20,7 +20,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -34,7 +34,7 @@ describe(renderOffer, () => {
 			Comment **\`/formatly\`** on this pull request and I'll format those files, then push a single commit to this branch.
 			A comment of just _yes_ works too.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -45,7 +45,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -58,7 +58,7 @@ describe(renderOffer, () => {
 			Comment **\`/formatly\`** on this pull request and I'll format those files, then push a single commit to this branch.
 			A comment of just _yes_ works too.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -69,7 +69,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -87,7 +87,7 @@ describe(renderOffer, () => {
 			> This pull request comes from a fork with _Allow edits by maintainers_ turned off, so I won't be able to push to its branch.
 			> Turning that on in the pull request's sidebar will let me help.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -98,7 +98,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -115,7 +115,7 @@ describe(renderOffer, () => {
 			> [!NOTE]
 			> 2 workflow files also need formatting. I never write to \`.github/workflows\`, so those will need a manual pass.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -126,7 +126,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -139,7 +139,7 @@ describe(renderOffer, () => {
 
 			Comment **\`/formatly\`** on this pull request and I'll format those files, then push a single commit to this branch.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -157,7 +157,7 @@ describe(renderOffer, () => {
 
 			<!-- formatly-on-demand: offer -->
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -190,7 +190,7 @@ describe(renderOffer, () => {
 			Comment **\`/formatly\`** on this pull request and I'll format those files, then push a single commit to this branch.
 			A comment of just _yes_ works too.
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 
@@ -208,7 +208,7 @@ describe(renderOffer, () => {
 
 			Hi from the Example team!
 
-			### 🧼 Would you like me to format this pull request?
+			### 🚿 Would you like me to format this pull request?
 
 			This repository formats code with [Prettier](https://prettier.io).
 
@@ -224,7 +224,7 @@ describe(renderOffer, () => {
 
 			_Questions? Ask in Discord._
 
-			> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
+			> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._"
 		`);
 	});
 });

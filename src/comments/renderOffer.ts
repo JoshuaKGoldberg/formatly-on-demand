@@ -40,7 +40,7 @@ export function renderOffer({
 		commentMarker,
 		offerMarker,
 		commentHeader,
-		"### 🧼 Would you like me to format this pull request?",
+		"### 🚿 Would you like me to format this pull request?",
 		`This repository formats code with ${formatterLinks[formatter]}.`,
 		`${files.length === 1 ? "One file" : `${files.length.toString()} files`} in this pull request ${files.length === 1 ? "isn't" : "aren't"} formatted the way it wants:`,
 		listed.map((file) => `- \`${file}\``).join("\n") +
@@ -63,7 +63,7 @@ export function renderOffer({
 			? `> [!NOTE]\n> ${excludedWorkflowFiles.toString()} workflow ${excludedWorkflowFiles === 1 ? "file" : "files"} also ${excludedWorkflowFiles === 1 ? "needs" : "need"} formatting. I never write to \`.github/workflows\`, so those will need a manual pass.`
 			: undefined,
 		commentFooter,
-		"> 🧼 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._",
+		"> 🚿 _This comment was posted automatically by [formatly-on-demand](https://github.com/JoshuaKGoldberg/formatly-on-demand)._",
 	]
 		.filter(Boolean)
 		.join("\n\n");

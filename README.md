@@ -2,7 +2,7 @@
 
 <p align="center">
 	Offers to format pull requests with whatever formatter your project is already using, then formats them on demand.
-	🧼
+	🚿
 </p>
 
 <p align="center">

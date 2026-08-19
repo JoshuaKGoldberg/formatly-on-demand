@@ -2,7 +2,7 @@ author: JoshuaKGoldberg
 branding:
   color: green
   icon: droplet
-description: Offers to format pull requests with whatever formatter your project is already using, then formats them on demand. 🧼
+description: Offers to format pull requests with whatever formatter your project is already using, then formats them on demand. 🚿
 inputs:
   accept-yes:
     default: "true"
