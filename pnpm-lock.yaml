@@ -34,7 +34,7 @@ importers:
         specifier: 26.4.0
         version: 26.4.0
       '@vercel/ncc':
-        specifier: ^0.45.0
+        specifier: 0.45.0
         version: 0.45.0
       '@vitest/coverage-v8':
         specifier: 4.1.10
