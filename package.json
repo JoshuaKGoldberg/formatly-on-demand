@@ -45,7 +45,7 @@
 	"dependencies": {
 		"@actions/core": "^3.0.1",
 		"@actions/github": "^9.1.1",
-		"formatly": "^0.4.0"
+		"formatly": "^0.7.0"
 	},
 	"devDependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "4.7.2",

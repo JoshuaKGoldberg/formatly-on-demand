@@ -15,8 +15,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       formatly:
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^0.7.0
+        version: 0.7.0
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.2
@@ -1945,11 +1945,6 @@ packages:
   format@0.2.2:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
-
-  formatly@0.4.0:
-    resolution: {integrity: sha512-n7aIcdKlAbGjt0OPa/dPFTp9UPY5qShthNR92iYF6qNEy2QiL4NTXe+/UEN3AUrdrgg9OQFsdKNualSSHUjzKw==}
-    engines: {node: '>=18.3.0'}
-    hasBin: true
 
   formatly@0.7.0:
     resolution: {integrity: sha512-7CXJtIIA0zy/u12StsYk25qVKxvdLA2ep2sTNxK3ov0mGNIIDqIvAXDSgTnAfDJFsPfWjuz0WjfYSdpvnLA5Tg==}
@@ -4874,10 +4869,6 @@ snapshots:
   flatted@3.4.4: {}
 
   format@0.2.2: {}
-
-  formatly@0.4.0:
-    dependencies:
-      fd-package-json: 2.0.0
 
   formatly@0.7.0:
     dependencies:
