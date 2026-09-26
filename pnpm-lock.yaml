@@ -173,8 +173,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       formatly:
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^0.9.0
+        version: 0.9.1
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.8.0
@@ -2174,13 +2174,13 @@ packages:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
 
-  formatly@0.4.0:
-    resolution: {integrity: sha512-n7aIcdKlAbGjt0OPa/dPFTp9UPY5qShthNR92iYF6qNEy2QiL4NTXe+/UEN3AUrdrgg9OQFsdKNualSSHUjzKw==}
+  formatly@0.7.0:
+    resolution: {integrity: sha512-7CXJtIIA0zy/u12StsYk25qVKxvdLA2ep2sTNxK3ov0mGNIIDqIvAXDSgTnAfDJFsPfWjuz0WjfYSdpvnLA5Tg==}
     engines: {node: '>=18.3.0'}
     hasBin: true
 
-  formatly@0.7.0:
-    resolution: {integrity: sha512-7CXJtIIA0zy/u12StsYk25qVKxvdLA2ep2sTNxK3ov0mGNIIDqIvAXDSgTnAfDJFsPfWjuz0WjfYSdpvnLA5Tg==}
+  formatly@0.9.1:
+    resolution: {integrity: sha512-gkwhjqCgO4ZcOhRcdIJKdjOtRwYpv9ic8mVjKP5+X41zfFkPajtXdWy8be45Abh5cTiLkrlQDWS2J/pc0KS1eQ==}
     engines: {node: '>=18.3.0'}
     hasBin: true
 
@@ -5242,11 +5242,12 @@ snapshots:
 
   format@0.2.2: {}
 
-  formatly@0.4.0:
+  formatly@0.7.0:
     dependencies:
       fd-package-json: 2.0.0
+      package-manager-detector: 1.8.0
 
-  formatly@0.7.0:
+  formatly@0.9.1:
     dependencies:
       fd-package-json: 2.0.0
       package-manager-detector: 1.8.0
