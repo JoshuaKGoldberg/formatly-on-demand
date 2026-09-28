@@ -1,7 +1,8 @@
 {
 	"git": {
 		"commitMessage": "chore: release v${version}",
-		"requireCommits": true
+		"requireCommits": true,
+		"tagMatch": "[0-9]*.[0-9]*.[0-9]*"
 	},
 	"github": { "release": true, "releaseName": "v${version}" },
 	"npm": { "skipChecks": true },
