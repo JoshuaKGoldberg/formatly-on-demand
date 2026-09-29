@@ -24,13 +24,9 @@
 It doesn't touch the branch until the pull request's author or a maintainer comments `/formatly` to ask it to.
 Then it formats those files with [`formatly`](https://github.com/JoshuaKGoldberg/formatly) and pushes a single commit.
 
-Formatting is run with whichever formatter your repository already uses: [Biome](https://biomejs.dev/formatter), [deno fmt](https://docs.deno.com/runtime/reference/cli/fmt), [dprint](https://dprint.dev), [oxfmt](https://oxc.rs), or [Prettier](https://prettier.io).
-No formatter-specific configuration is needed.
-
 ### Setup
 
 Add three workflow files to your repository.
-Each one calls a reusable workflow, so the jobs and permissions that keep this safe stay in one place.
 
 `.github/workflows/formatly-on-demand-detect.yaml` checks each pull request:
 
@@ -86,7 +82,7 @@ permissions:
 jobs:
   format:
     secrets:
-      push-token: ${{ secrets.FORMATLY_ON_DEMAND_TOKEN }}
+      push-token: ${{ secrets.ACCESS_TOKEN }}
     uses: JoshuaKGoldberg/formatly-on-demand/.github/workflows/format.yaml@v0
     with:
       install: pnpm install --frozen-lockfile
@@ -101,7 +97,7 @@ A workflow's built-in `GITHUB_TOKEN` can't push to a branch that lives in somebo
 Formatting pull requests from forks, which is most of them for most open source repositories, needs a token of its own:
 
 1. Create a [classic personal access token](https://github.com/settings/tokens/new) with the _public_repo_ scope, from an account with push access to your repository
-2. Save it as a repository secret, such as `FORMATLY_ON_DEMAND_TOKEN`
+2. Save it as a repository secret, such as `ACCESS_TOKEN`
 3. Pass it as the `push-token` secret, as in the workflow above
 
 Without that secret, pull requests from forks get a comment explaining that a maintainer will need to format them by hand.
