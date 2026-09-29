@@ -147,6 +147,9 @@ That is arbitrary code execution from whoever opened the pull request, so `forma
 - Only the pull request's author and the associations in `allowed-associations` can ask for formatting.
   Comments from anyone else are ignored.
 
+That being said, it is impossible to be 100% confident in all actions' security measures.
+Please use this action with caution and be safe with potentially malicious external contributors.
+
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
