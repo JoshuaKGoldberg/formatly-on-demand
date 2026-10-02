@@ -13,7 +13,7 @@ jobs:
         run: ${{ inputs.install }}
         working-directory: ${{ inputs.working-directory }}
       - id: detect
-        uses: JoshuaKGoldberg/formatly-on-demand@v0
+        uses: JoshuaKGoldberg/formatly-on-demand@ca87d757e55335acbd3928769d14719b5ed8d722 # v0
         with:
           mode: detect
           working-directory: ${{ inputs.working-directory }}
