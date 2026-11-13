@@ -12,7 +12,7 @@ jobs:
           name: formatly-on-demand
           path: ${{ runner.temp }}/formatly-on-demand
           run-id: ${{ github.event.workflow_run.id }}
-      - uses: JoshuaKGoldberg/formatly-on-demand@v0
+      - uses: JoshuaKGoldberg/formatly-on-demand@ca87d757e55335acbd3928769d14719b5ed8d722 # v0
         with:
           accept-yes: ${{ inputs.accept-yes }}
           command: ${{ inputs.command }}
