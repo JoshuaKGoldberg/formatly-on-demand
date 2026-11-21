@@ -22,7 +22,7 @@ jobs:
         with:
           name: formatly-on-demand-patch
           path: ${{ runner.temp }}/formatly-on-demand
-      - uses: JoshuaKGoldberg/formatly-on-demand@v0
+      - uses: JoshuaKGoldberg/formatly-on-demand@ca87d757e55335acbd3928769d14719b5ed8d722 # v0
         with:
           command: ${{ inputs.command }}
           comment-footer: ${{ inputs.comment-footer }}
@@ -54,7 +54,7 @@ jobs:
         run: ${{ inputs.install }}
         working-directory: ${{ inputs.working-directory }}
       - id: detect
-        uses: JoshuaKGoldberg/formatly-on-demand@v0
+        uses: JoshuaKGoldberg/formatly-on-demand@ca87d757e55335acbd3928769d14719b5ed8d722 # v0
         with:
           files: ${{ needs.resolve.outputs.files }}
           head-sha: ${{ needs.resolve.outputs.head-sha }}
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: resolve
-        uses: JoshuaKGoldberg/formatly-on-demand@v0
+        uses: JoshuaKGoldberg/formatly-on-demand@ca87d757e55335acbd3928769d14719b5ed8d722 # v0
         with:
           accept-yes: ${{ inputs.accept-yes }}
           allowed-associations: ${{ inputs.allowed-associations }}
