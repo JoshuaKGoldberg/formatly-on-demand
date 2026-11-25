@@ -4,7 +4,7 @@ import type {
 	CommentInfo,
 	FormatlyGitHub,
 	PullRequestInfo,
-} from "../github.js";
+} from "../github.ts";
 
 export interface FakeGitHubOptions {
 	comments?: CommentInfo[];

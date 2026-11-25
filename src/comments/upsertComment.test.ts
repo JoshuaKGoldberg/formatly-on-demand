@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { createFakeGitHub } from "../tests/createFakeGitHub.js";
-import { commentMarker } from "./markers.js";
-import { upsertComment } from "./upsertComment.js";
+import { createFakeGitHub } from "../tests/createFakeGitHub.ts";
+import { commentMarker } from "./markers.ts";
+import { upsertComment } from "./upsertComment.ts";
 
 describe(upsertComment, () => {
 	it("creates a comment when the pull request has no formatly comment", async () => {

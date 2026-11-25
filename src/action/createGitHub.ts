@@ -1,6 +1,6 @@
 import { getOctokit } from "@actions/github";
 
-import type { FormatlyGitHub } from "../github.js";
+import type { FormatlyGitHub } from "../github.ts";
 
 export interface CreateGitHubOptions {
 	owner: string;

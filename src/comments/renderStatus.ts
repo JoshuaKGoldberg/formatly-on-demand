@@ -1,4 +1,4 @@
-import { commentMarker } from "./markers.js";
+import { commentMarker } from "./markers.ts";
 
 export interface RenderStatusOptions {
 	commentFooter?: string;

@@ -1,16 +1,16 @@
 import * as core from "@actions/core";
 
-import type { Status } from "../comments/renderStatus.js";
-import type { FormatlyGitHub } from "../github.js";
+import type { Status } from "../comments/renderStatus.ts";
+import type { FormatlyGitHub } from "../github.ts";
 
-import { isOfferComment } from "../comments/markers.js";
-import { renderStatus } from "../comments/renderStatus.js";
+import { isOfferComment } from "../comments/markers.ts";
+import { renderStatus } from "../comments/renderStatus.ts";
 import {
 	findFormatlyComment,
 	upsertComment,
-} from "../comments/upsertComment.js";
-import { isAllowedActor } from "../consent/isAllowedActor.js";
-import { parseCommand } from "../consent/parseCommand.js";
+} from "../comments/upsertComment.ts";
+import { isAllowedActor } from "../consent/isAllowedActor.ts";
+import { parseCommand } from "../consent/parseCommand.ts";
 
 export interface Resolution {
 	files: string[];

@@ -1,6 +1,6 @@
 /.all-contributorsrc
 /.husky
-/.tmp-tests
+/_tmp_*
 /coverage
 /dist
 /lib

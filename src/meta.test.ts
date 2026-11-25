@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { parseMeta } from "./meta.js";
+import { parseMeta } from "./meta.ts";
 
 const headSha = "0123456789abcdef0123456789abcdef01234567";
 

@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
       - if: inputs.install != ''
-        run: ${{ inputs.install }}
+        run: ${{ inputs.install }} # zizmor: ignore[template-injection]
         working-directory: ${{ inputs.working-directory }}
       - id: detect
         uses: JoshuaKGoldberg/formatly-on-demand@v0

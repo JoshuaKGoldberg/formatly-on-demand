@@ -1,15 +1,15 @@
 import * as core from "@actions/core";
 
-import type { FormatlyGitHub } from "../github.js";
-import type { DetectionMeta } from "../types.js";
+import type { FormatlyGitHub } from "../github.ts";
+import type { DetectionMeta } from "../types.ts";
 
-import { isOfferComment } from "../comments/markers.js";
-import { renderOffer } from "../comments/renderOffer.js";
-import { renderStatus } from "../comments/renderStatus.js";
+import { isOfferComment } from "../comments/markers.ts";
+import { renderOffer } from "../comments/renderOffer.ts";
+import { renderStatus } from "../comments/renderStatus.ts";
 import {
 	findFormatlyComment,
 	upsertComment,
-} from "../comments/upsertComment.js";
+} from "../comments/upsertComment.ts";
 
 export interface OfferOptions {
 	acceptYes: boolean;

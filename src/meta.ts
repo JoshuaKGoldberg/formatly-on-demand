@@ -1,8 +1,8 @@
 import type { FormatterName } from "formatly";
 
-import type { DetectionMeta } from "./types.js";
+import type { DetectionMeta } from "./types.ts";
 
-import { isFormattablePath } from "./paths.js";
+import { isFormattablePath } from "./paths.ts";
 
 export const metaFileName = "meta.json";
 

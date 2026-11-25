@@ -4,14 +4,14 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 
-import type { Mode } from "../types.js";
+import type { Mode } from "../types.ts";
 
-import { metaFileName, parseMeta, patchFileName } from "../meta.js";
-import { apply } from "../modes/apply.js";
-import { detect } from "../modes/detect.js";
-import { offer } from "../modes/offer.js";
-import { resolve } from "../modes/resolve.js";
-import { createGitHub } from "./createGitHub.js";
+import { metaFileName, parseMeta, patchFileName } from "../meta.ts";
+import { apply } from "../modes/apply.ts";
+import { detect } from "../modes/detect.ts";
+import { offer } from "../modes/offer.ts";
+import { resolve } from "../modes/resolve.ts";
+import { createGitHub } from "./createGitHub.ts";
 
 interface CommentPayload {
 	author_association?: string;

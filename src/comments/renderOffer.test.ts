@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import type { RenderOfferOptions } from "./renderOffer.js";
+import type { RenderOfferOptions } from "./renderOffer.ts";
 
-import { renderOffer } from "./renderOffer.js";
+import { renderOffer } from "./renderOffer.ts";
 
 const options: RenderOfferOptions = {
 	acceptYes: true,

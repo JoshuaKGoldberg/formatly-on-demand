@@ -1,13 +1,13 @@
 import * as core from "@actions/core";
 import fs from "node:fs/promises";
 
-import type { Status } from "../comments/renderStatus.js";
-import type { FormatlyGitHub } from "../github.js";
+import type { Status } from "../comments/renderStatus.ts";
+import type { FormatlyGitHub } from "../github.ts";
 
-import { renderStatus } from "../comments/renderStatus.js";
-import { upsertComment } from "../comments/upsertComment.js";
-import { applyPatch, commitFiles, pushBranch } from "../git/repository.js";
-import { validatePatch } from "../patches/validatePatch.js";
+import { renderStatus } from "../comments/renderStatus.ts";
+import { upsertComment } from "../comments/upsertComment.ts";
+import { applyPatch, commitFiles, pushBranch } from "../git/repository.ts";
+import { validatePatch } from "../patches/validatePatch.ts";
 
 export interface ApplyOptions {
 	command: string;
