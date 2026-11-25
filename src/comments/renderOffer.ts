@@ -1,6 +1,6 @@
 import type { FormatterName } from "formatly";
 
-import { commentMarker, offerMarker } from "./markers.js";
+import { commentMarker, offerMarker } from "./markers.ts";
 
 export interface RenderOfferOptions {
 	acceptYes: boolean;

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { isFormattablePath, isSafeRepositoryPath } from "./paths.js";
+import { isFormattablePath, isSafeRepositoryPath } from "./paths.ts";
 
 describe(isSafeRepositoryPath, () => {
 	it.each([

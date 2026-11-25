@@ -1,4 +1,4 @@
-import { isFormattablePath, workflowsDirectory } from "../paths.js";
+import { isFormattablePath, workflowsDirectory } from "../paths.ts";
 
 export type PatchValidation =
 	{ files: string[]; valid: true } | { problem: string; valid: false };

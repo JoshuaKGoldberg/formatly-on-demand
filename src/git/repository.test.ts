@@ -6,7 +6,7 @@ import {
 	commitAll,
 	createTestRepository,
 	writeFiles,
-} from "../tests/createTestRepository.js";
+} from "../tests/createTestRepository.ts";
 import {
 	applyPatch,
 	commitFiles,
@@ -16,8 +16,8 @@ import {
 	getHeadSha,
 	pushBranch,
 	restoreFiles,
-} from "./repository.js";
-import { runGit } from "./runGit.js";
+} from "./repository.ts";
+import { runGit } from "./runGit.ts";
 
 const initialFiles = {
 	"src/index.ts": "const value = { a: 1 };\n",

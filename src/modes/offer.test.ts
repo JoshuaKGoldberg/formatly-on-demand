@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import type { DetectionMeta } from "../types.js";
+import type { DetectionMeta } from "../types.ts";
 
-import { commentMarker, offerMarker } from "../comments/markers.js";
-import { createFakeGitHub } from "../tests/createFakeGitHub.js";
-import { offer } from "./offer.js";
+import { commentMarker, offerMarker } from "../comments/markers.ts";
+import { createFakeGitHub } from "../tests/createFakeGitHub.ts";
+import { offer } from "./offer.ts";
 
 const headSha = "0123456789abcdef0123456789abcdef01234567";
 

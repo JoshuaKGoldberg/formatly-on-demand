@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import type { Status } from "./renderStatus.js";
+import type { Status } from "./renderStatus.ts";
 
-import { renderStatus } from "./renderStatus.js";
+import { renderStatus } from "./renderStatus.ts";
 
 const statuses: Status[] = [
 	{ kind: "already-formatted" },

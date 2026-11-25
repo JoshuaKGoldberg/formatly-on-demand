@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { parseCommand } from "./parseCommand.js";
+import { parseCommand } from "./parseCommand.ts";
 
 const command = "/formatly";
 

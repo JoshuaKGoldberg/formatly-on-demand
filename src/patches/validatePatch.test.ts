@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { validatePatch } from "./validatePatch.js";
+import { validatePatch } from "./validatePatch.ts";
 
 const options = { maxBytes: 1000000, maxFiles: 200 };
 

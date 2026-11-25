@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { commentMarker, offerMarker } from "../comments/markers.js";
-import { createFakeGitHub } from "../tests/createFakeGitHub.js";
-import { resolve } from "./resolve.js";
+import { commentMarker, offerMarker } from "../comments/markers.ts";
+import { createFakeGitHub } from "../tests/createFakeGitHub.ts";
+import { resolve } from "./resolve.ts";
 
 const options = {
 	acceptYes: true,

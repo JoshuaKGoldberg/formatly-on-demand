@@ -2,8 +2,8 @@
 	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
 		".all-contributorsrc",
-		".github",
 		".tmp-tests",
+		"/_tmp_*",
 		"CHANGELOG.md",
 		"coverage",
 		"dist",
@@ -12,13 +12,23 @@
 		"pnpm-lock.yaml"
 	],
 	"words": [
+		"JoshuaKGoldberg",
+		"MatteoGabriele",
+		"agentscan",
+		"apexskier",
 		"biomejs",
 		"dprint",
 		"eeef",
 		"extraheader",
 		"formatly",
 		"lockfiles",
+		"mshick",
+		"octoguide",
 		"oxfmt",
-		"postbuild"
+		"peakoss",
+		"postbuild",
+		"stefanzweifel",
+		"zizmor",
+		"zizmorcore"
 	]
 }

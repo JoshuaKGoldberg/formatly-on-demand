@@ -1,8 +1,8 @@
 import * as core from "@actions/core";
 
-import type { FormatlyGitHub } from "../github.js";
+import type { FormatlyGitHub } from "../github.ts";
 
-import { isFormatlyComment } from "./markers.js";
+import { isFormatlyComment } from "./markers.ts";
 
 export interface UpsertCommentOptions {
 	body: string;

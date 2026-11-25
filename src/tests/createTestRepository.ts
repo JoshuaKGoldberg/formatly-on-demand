@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { runGit } from "../git/runGit.js";
+import { runGit } from "../git/runGit.ts";
 
 // Repositories are created inside this project by default so that formatly can
 // resolve the Prettier installed here, rather than downloading one.

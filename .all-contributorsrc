@@ -26,6 +26,5 @@
   ],
   "projectName": "formatly-on-demand",
   "projectOwner": "JoshuaKGoldberg",
-  "repoType": "github",
-  "commitConvention": "angular"
+  "repoType": "github"
 }

@@ -4,16 +4,16 @@ import { existsSync } from "node:fs";
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import type { DetectionMeta } from "../types.js";
+import type { DetectionMeta } from "../types.ts";
 
 import {
 	createPatch,
 	getChangedFiles,
 	getDirtyFiles,
 	restoreFiles,
-} from "../git/repository.js";
-import { metaFileName, patchFileName } from "../meta.js";
-import { isFormattablePath, workflowsDirectory } from "../paths.js";
+} from "../git/repository.ts";
+import { metaFileName, patchFileName } from "../meta.ts";
+import { isFormattablePath, workflowsDirectory } from "../paths.ts";
 
 export interface DetectOptions {
 	baseSha?: string;

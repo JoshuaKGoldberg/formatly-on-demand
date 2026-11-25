@@ -3,13 +3,13 @@ import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 
-import { getHeadSha } from "../git/repository.js";
+import { getHeadSha } from "../git/repository.ts";
 import {
 	commitAll,
 	createTestRepository,
 	writeFiles,
-} from "../tests/createTestRepository.js";
-import { detect } from "./detect.js";
+} from "../tests/createTestRepository.ts";
+import { detect } from "./detect.ts";
 
 const unformatted = "const value = {a:1}\n";
 

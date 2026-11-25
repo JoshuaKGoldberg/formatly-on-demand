@@ -3,14 +3,14 @@ import os from "node:os";
 import path from "node:path";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { createFakeGitHub } from "../tests/createFakeGitHub.js";
-import { apply } from "./apply.js";
+import { createFakeGitHub } from "../tests/createFakeGitHub.ts";
+import { apply } from "./apply.ts";
 
 const mockApplyPatch = vi.fn();
 const mockCommitFiles = vi.fn();
 const mockPushBranch = vi.fn();
 
-vi.mock("../git/repository.js", () => ({
+vi.mock("../git/repository.ts", () => ({
 	get applyPatch() {
 		return mockApplyPatch;
 	},

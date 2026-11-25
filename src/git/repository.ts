@@ -1,6 +1,6 @@
-import type { GitOptions } from "./runGit.js";
+import type { GitOptions } from "./runGit.ts";
 
-import { runGit, tryGit } from "./runGit.js";
+import { runGit, tryGit } from "./runGit.ts";
 
 export interface CommitOptions extends GitOptions {
 	files: string[];

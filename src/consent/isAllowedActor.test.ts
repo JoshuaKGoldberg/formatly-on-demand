@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { isAllowedActor } from "./isAllowedActor.js";
+import { isAllowedActor } from "./isAllowedActor.ts";
 
 const allowedAssociations = ["OWNER", "MEMBER", "COLLABORATOR"];
 
