@@ -192,8 +192,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       formatly:
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^0.12.0
+        version: 0.12.3(@clack/prompts@1.9.0)
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.8.1
@@ -1505,6 +1505,9 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
   '@streetsidesoftware/unindent@1.0.1':
     resolution: {integrity: sha512-ZXfg7MT3AT9ZOq/hgzbqNc01zVPG+PFkr+kbB2OHlMcNrtvK10ZPkNgy38MqTErjNeajh4VG1sSSv5zIyjOXxg==}
     engines: {node: '>=22.18.0'}
@@ -2456,9 +2459,9 @@ packages:
     engines: {node: '>=18.14.0'}
     hasBin: true
 
-  formatly@0.4.0:
-    resolution: {integrity: sha512-n7aIcdKlAbGjt0OPa/dPFTp9UPY5qShthNR92iYF6qNEy2QiL4NTXe+/UEN3AUrdrgg9OQFsdKNualSSHUjzKw==}
-    engines: {node: '>=18.3.0'}
+  formatly@0.12.3:
+    resolution: {integrity: sha512-jGtjZLVw6OXvfwqxrxYBc+x+CxmOcMT/KjZagmkrYCQTEtQxJPablRqZPFSNq75drNsHsadjb1djIsE9KE705w==}
+    engines: {node: ^20.12.0 || >=22}
     hasBin: true
 
   fsevents@2.3.3:
@@ -3308,6 +3311,15 @@ packages:
 
   parse-path@7.1.0:
     resolution: {integrity: sha512-EuCycjZtfPcjWk7KTksnJ5xPMvWGA/6i4zrLYhRG0hGvC3GPU/jGUj3Cy+ZR0v30duV3e23R95T1lE2+lsndSw==}
+
+  parse-standard-args@0.3.0:
+    resolution: {integrity: sha512-SH663jox6V7vxSZgroZJw9DgvSbcNHWOnjHjgvsPyj0/+OIbFraNJyDQbA+ATaAUIi0OGAmV27bIGUgcAEM41g==}
+    engines: {node: '>=18.7.0'}
+    peerDependencies:
+      '@clack/prompts': '>=0.11'
+    peerDependenciesMeta:
+      '@clack/prompts':
+        optional: true
 
   parse-statements@1.0.11:
     resolution: {integrity: sha512-HlsyYdMBnbPQ9Jr/VgJ1YF4scnldvJpJxCVx6KgqPL4dxppsWrJHCIIxQXMJrqGnsRkNPATbeMJ8Yxu7JMsYcA==}
@@ -5193,6 +5205,8 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
+  '@standard-schema/spec@1.1.0': {}
+
   '@streetsidesoftware/unindent@1.0.1': {}
 
   '@stroncium/procfs@1.2.1': {}
@@ -6354,9 +6368,15 @@ snapshots:
       fd-package-json: 2.0.0
       package-manager-detector: 1.8.0
 
-  formatly@0.4.0:
+  formatly@0.12.3(@clack/prompts@1.9.0):
     dependencies:
       fd-package-json: 2.0.0
+      package-manager-detector: 1.8.0
+      parse-standard-args: 0.3.0(@clack/prompts@1.9.0)
+      tinyexec: 1.3.1
+      zod: 4.6.7
+    transitivePeerDependencies:
+      - '@clack/prompts'
 
   fsevents@2.3.3:
     optional: true
@@ -7389,6 +7409,12 @@ snapshots:
   parse-path@7.1.0:
     dependencies:
       protocols: 2.0.2
+
+  parse-standard-args@0.3.0(@clack/prompts@1.9.0):
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+    optionalDependencies:
+      '@clack/prompts': 1.9.0
 
   parse-statements@1.0.11: {}
 
